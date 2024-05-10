@@ -1,4 +1,4 @@
-Project: Quora Retrieval System
+# Project: Quora Retrieval System
 
 This project implements a retrieval system for Quora, aiming to find the most similar existing questions (documents) in the Quora database for a given new question (query). The system leverages advanced text processing techniques and evaluation metrics to deliver accurate and efficient recommendations.
 
@@ -11,7 +11,7 @@ Dataset: 'Query_Doc' containing three CSV files:
 Source: QueryDoc
 Tasks:
 
-1. Data Preprocessing:
+## 1. Data Preprocessing:
 
 Cleaning: Removal of non-alphanumeric characters and whitespaces from documents and queries.
 Spelling Correction: Utilizes spaCy to rectify spelling errors in both queries and documents. Corrected and original queries are printed for user insight.
@@ -19,26 +19,26 @@ Tokenization: Words are extracted from documents using spaCy.
 Vocabulary Generation:
 Filters out infrequent (less than 5 documents) and overly frequent (more than 85% of documents) words, creating a tailored vocabulary for the task.
 TF-IDF vectors are computed for each document and query (may or may not involve scikit-learn).
-2. Initial Retrieval and Evaluation:
+## 2. Initial Retrieval and Evaluation:
 
 Cosine Similarity: For each query, its TF-IDF vector is compared with document vectors using cosine similarity.
 Top-k Retrieval: Retrieval of the top 5 and top 10 most similar documents for each query.
 Evaluation: Precision@k scores (P@1, P@5, P@10) are calculated to assess retrieval accuracy, averaged across all queries.
 Performance Improvement:
 
-3. Stemming: Exploration of stemming's impact on vocabulary size and retrieval performance (Task 2.1).
+## 3. Stemming: Exploration of stemming's impact on vocabulary size and retrieval performance (Task 2.1).
 Lemmatization: Examination of lemmatization's influence on vocabulary size and retrieval performance (Task 2.2).
 Vocabulary Size Comparisons: Reporting on the sizes of the original vocabulary, stemmed vocabulary, and lemmatized vocabulary (Task 2.3).
 Performance Discussion: Analysis of whether stemming or lemmatization improves retrieval accuracy and the reasons behind the observed results (Task 2.4).
 
-4. Advanced Techniques and Evaluation:
+## 4. Advanced Techniques and Evaluation:
 
 NER and POS Tagging: Integration of spaCy for named entity recognition (NER) and parts-of-speech (POS) tagging (Task 3.1).
 Weighted TF-IDF: Assigning higher weights to nouns (multiplier of 2) and named entities (multiplier of 4) within TF-IDF vectors for increased emphasis (Task 3.2).
 Evaluation with Weighted TF-IDF: Reporting on retrieval performance metrics using weighted TF-IDF vectors and analyzing the results (Task 3.3).
 Efficiency and Performance Improvements (Optional): Optional explorations to enhance efficiency or performance, including details about the changes and their motivations (Task 4).
 
-Project Structure:
+# Project Structure:
 
 The project is likely to be organized into modules/scripts for various tasks:
 Data preprocessing and cleaning.
